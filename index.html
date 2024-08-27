@@ -15,6 +15,16 @@
 
 
     <title>AJOI T VARGHESE</title>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "SHIlI0dM_3FYksWmF",
+        });
+    })();
+    </script>
 
 </head>
 <body>
@@ -574,20 +584,20 @@
                 <div class="contact_inputs grid">
                     <div class="contact_content">
                         <label for="" class="contact_label">NAME</label>
-                        <input type="text" class="contact_input">
+                        <input type="text" placeholder="Adam John" class="contact_input" id="name">
                     </div>
                     <div class="contact_content">
                         <label for="" class="contact_label">E-mail</label>
-                        <input type="email" class="contact_input">
+                        <input type="email" placeholder="adamjohn434@email.com" class="contact_input" id="email">
                     </div>
                 </div>
                 <div class="contact_content">
                     <label for="" class="contact_label">Message</label>
-                    <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                    <textarea name="" placeholder="Your message here" id="message" cols="0" rows="7" class="contact_input" ></textarea>
                 </div>
 
                 <div>
-                    <a href="#" class="button button_flex">
+                    <a href="#" onclick="sendMail()" class="button button_flex">
                         Send Message
                         <i class="uil uil-message button_icon"></i>
                     </a>
