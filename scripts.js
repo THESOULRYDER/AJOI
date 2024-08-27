@@ -152,3 +152,17 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+
+
+// email
+function sendMail(){
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById('email').value,
+        message: document.getElementById("message").value,
+    }
+
+    emailjs.send("service_lm25ksa","template_mha93c4",parms).then(alert("Email Sent!"))
+}
